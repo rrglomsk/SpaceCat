@@ -8,6 +8,8 @@ public class PauseButton : MonoBehaviour {
 	private GameObject backdrop;
 	private GameObject ground;
 	public Vector3 backSpeed = new Vector3();
+	public Vector3 groundSpeed = new Vector3();
+
 	public Vector3 moveSpeed = new Vector3();
 
 	// Use this for initialization
@@ -35,9 +37,10 @@ public class PauseButton : MonoBehaviour {
 
 		if (moving) //&& backdrop.transform.position.x > -4.8f)
 		{
-			spaceCat.transform.position += moveSpeed;
+			//spaceCat.transform.position += moveSpeed;
 			backdrop.transform.position -= backSpeed;
-			ground.transform.position -= backSpeed;
+			ground.transform.position -= groundSpeed;
+			//camera.transform.position += moveSpeed;
 
 		}	
 	}
