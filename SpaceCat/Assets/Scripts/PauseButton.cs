@@ -4,11 +4,16 @@ using System.Collections;
 public class PauseButton : MonoBehaviour {
 
 	private bool moving = false;
+	private Animator animator;
 	private GameObject spaceCat;
 	private GameObject backdrop;
-	private GameObject ground;
+	private GameObject mountain;
+	private GameObject move;
+	private GameObject gravityUp;
+	private GameObject gravityDown;
+
 	public Vector3 backSpeed = new Vector3();
-	public Vector3 groundSpeed = new Vector3();
+	public Vector3 mountainSpeed = new Vector3();
 
 	public Vector3 moveSpeed = new Vector3();
 
@@ -16,7 +21,12 @@ public class PauseButton : MonoBehaviour {
 	void Start () {
 		spaceCat = GameObject.Find("cat");
 		backdrop = GameObject.Find("Backdrop");
-		ground = GameObject.Find ("Ground");
+		mountain = GameObject.Find ("Mountains");
+		move = GameObject.Find ("Movement");
+		gravityUp = GameObject.Find ("GravityUp");
+		gravityDown = GameObject.Find ("GravityDown");
+		animator = GameObject.Find ("cat").GetComponent<Animator>();
+
 	}
 	
 	// Update is called once per frame
@@ -32,17 +42,24 @@ public class PauseButton : MonoBehaviour {
 				} else if (Application.platform == RuntimePlatform.WindowsEditor) {
 						if (Input.GetMouseButtonDown (0)) {
 								spaceCat.transform.position += moveSpeed;
+								backdrop.transform.position -= backSpeed;
 						}
 				}
 
-		if (moving) //&& backdrop.transform.position.x > -4.8f)
-		{
-			//spaceCat.transform.position += moveSpeed;
-			backdrop.transform.position -= backSpeed;
-			ground.transform.position -= groundSpeed;
-			//camera.transform.position += moveSpeed;
+		if (moving) { //&& backdrop.transform.position.x > -4.8f)
+						animator.SetBool ("Walking", true);
+						spaceCat.transform.position += moveSpeed;
+						move.transform.position += moveSpeed;
+						gravityUp.transform.position += moveSpeed;
+						gravityDown.transform.position += moveSpeed;
+		
+						backdrop.transform.position += backSpeed;
+						mountain.transform.position += mountainSpeed;
 
-		}	
+				} else {
+						animator.SetBool("Walking", false);
+				}
+		
 	}
 
 	void CheckTouch(Vector3 pos, string phase) {
