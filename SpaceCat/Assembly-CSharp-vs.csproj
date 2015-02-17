@@ -46,14 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GravityControl.cs" />
-     <Compile Include="Assets\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\CatController.cs" />
-     <Compile Include="Assets\Scripts\GroundGravity.cs" />
-     <Compile Include="Assets\Scripts\GroundRepeat.cs" />
-     <Compile Include="Assets\Scripts\Jump.cs" />
-     <Compile Include="Assets\Scripts\PauseButton.cs" />
-     <Compile Include="Assets\Scripts\StartGame.cs" />
+     <Compile Include="Assets\Scripts\Select Stage\PlanetSelect.cs" />
+     <Compile Include="Assets\Scripts\Stage Controls\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Stage Controls\CatController.cs" />
+     <Compile Include="Assets\Scripts\Stage Controls\GravityControl.cs" />
+     <Compile Include="Assets\Scripts\Stage Controls\GroundRepeat.cs" />
+     <Compile Include="Assets\Scripts\Stage Controls\Jump.cs" />
+     <Compile Include="Assets\Scripts\Stage Controls\PauseButton.cs" />
+     <Compile Include="Assets\Scripts\Start Screen\StartGame.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/Rachel/Documents/SpaceCat/SpaceCat/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
