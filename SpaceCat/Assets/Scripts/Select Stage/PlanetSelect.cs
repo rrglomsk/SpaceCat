@@ -7,6 +7,7 @@ public class PlanetSelect : MonoBehaviour {
 	private string selectedPlanet;
 	private Animator animator;
 
+
 	
 	// Use this for initialization
 	void Start () {

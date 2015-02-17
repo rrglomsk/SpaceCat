@@ -6,12 +6,16 @@ public class GravityControl : MonoBehaviour {
 	private GameObject spaceCat;
 	public Vector3 jumpMovement = new Vector3();
 	private Animator animator;
+	private Camera controlsCamera;
+
 	
 	
 	// Use this for initialization
 	void Start () {
 		spaceCat = GameObject.Find("cat");
 		animator = GameObject.Find ("cat").GetComponent<Animator>();
+		controlsCamera = GameObject.Find("Controls Camera").camera;
+
 	}
 	
 	// Update is called once per frame
@@ -34,7 +38,7 @@ public class GravityControl : MonoBehaviour {
 	}
 	
 	void CheckTouch(Vector3 pos, string phase) {
-		Vector3 wp = Camera.main.ScreenToWorldPoint(pos);
+		Vector3 wp = controlsCamera.ScreenToWorldPoint(pos);
 		Vector2 touchPos = new Vector2(wp.x, wp.y);
 		Collider2D hit = Physics2D.OverlapPoint(touchPos);
 		

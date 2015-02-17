@@ -8,9 +8,7 @@ public class PauseButton : MonoBehaviour {
 	private GameObject spaceCat;
 	private GameObject backdrop;
 	private GameObject mountain;
-	private GameObject move;
-	private GameObject gravityUp;
-	private GameObject gravityDown;
+	private Camera controlsCamera;
 
 	public Vector3 backSpeed = new Vector3();
 	public Vector3 mountainSpeed = new Vector3();
@@ -22,10 +20,8 @@ public class PauseButton : MonoBehaviour {
 		spaceCat = GameObject.Find("cat");
 		backdrop = GameObject.Find("Backdrop");
 		mountain = GameObject.Find ("Mountains");
-		move = GameObject.Find ("Movement");
-		gravityUp = GameObject.Find ("GravityUp");
-		gravityDown = GameObject.Find ("GravityDown");
 		animator = GameObject.Find ("cat").GetComponent<Animator>();
+		controlsCamera = GameObject.Find("Controls Camera").camera;
 
 	}
 	
@@ -49,9 +45,6 @@ public class PauseButton : MonoBehaviour {
 		if (moving) { //&& backdrop.transform.position.x > -4.8f)
 						animator.SetBool ("Walking", true);
 						spaceCat.transform.position += moveSpeed;
-						move.transform.position += moveSpeed;
-						gravityUp.transform.position += moveSpeed;
-						gravityDown.transform.position += moveSpeed;
 		
 						backdrop.transform.position += backSpeed;
 						mountain.transform.position += mountainSpeed;
@@ -63,7 +56,7 @@ public class PauseButton : MonoBehaviour {
 	}
 
 	void CheckTouch(Vector3 pos, string phase) {
-		Vector3 wp = Camera.main.ScreenToWorldPoint(pos);
+		Vector3 wp = controlsCamera.ScreenToWorldPoint(pos);
 		Vector2 touchPos = new Vector2(wp.x, wp.y);
 		Collider2D hit = Physics2D.OverlapPoint(touchPos);
 		
