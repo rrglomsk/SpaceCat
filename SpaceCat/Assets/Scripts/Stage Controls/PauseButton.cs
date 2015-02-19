@@ -6,8 +6,8 @@ public class PauseButton : MonoBehaviour {
 	private bool moving = false;
 	private Animator animator;
 	private GameObject spaceCat;
-	private GameObject backdrop;
-	private GameObject mountain;
+	//private GameObject backdrop;
+	//private GameObject mountain;
 	private Camera controlsCamera;
 
 	public Vector3 backSpeed = new Vector3();
@@ -15,11 +15,12 @@ public class PauseButton : MonoBehaviour {
 
 	public Vector3 moveSpeed = new Vector3();
 
+
 	// Use this for initialization
 	void Start () {
 		spaceCat = GameObject.Find("cat");
-		backdrop = GameObject.Find("Backdrop");
-		mountain = GameObject.Find ("Mountains");
+		//backdrop = GameObject.Find("Backdrop");
+		//mountain = GameObject.Find ("Mountains");
 		animator = GameObject.Find ("cat").GetComponent<Animator>();
 		controlsCamera = GameObject.Find("Controls Camera").camera;
 
@@ -38,20 +39,19 @@ public class PauseButton : MonoBehaviour {
 				} else if (Application.platform == RuntimePlatform.WindowsEditor) {
 						if (Input.GetMouseButtonDown (0)) {
 								spaceCat.transform.position += moveSpeed;
-								backdrop.transform.position -= backSpeed;
 						}
 				}
 
 		if (moving) { //&& backdrop.transform.position.x > -4.8f)
-						animator.SetBool ("Walking", true);
-						spaceCat.transform.position += moveSpeed;
-		
-						backdrop.transform.position += backSpeed;
-						mountain.transform.position += mountainSpeed;
+			animator.SetBool ("Walking", true);
+			spaceCat.transform.position += moveSpeed;
 
-				} else {
-						animator.SetBool("Walking", false);
-				}
+			//backdrop.transform.position += backSpeed;
+			//mountain.transform.position += mountainSpeed;
+
+		} else {
+			animator.SetBool("Walking", false);
+		}
 		
 	}
 
@@ -65,11 +65,12 @@ public class PauseButton : MonoBehaviour {
 			moving = true;
 		}
 		
-		if (hit.gameObject.name == "Movement" && hit && phase == "ended")
+		if (hit && phase == "ended")
 		{
 			moving = false;
 		}
 	}
+
 }
 
 

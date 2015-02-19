@@ -46,12 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BackgroundParallax.cs" />
      <Compile Include="Assets\Scripts\Select Stage\PlanetSelect.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\CatController.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\GravityControl.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\GroundRepeat.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\Jump.cs" />
+     <Compile Include="Assets\Scripts\Stage Controls\ObstacleHit.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\PauseButton.cs" />
      <Compile Include="Assets\Scripts\Start Screen\StartGame.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />

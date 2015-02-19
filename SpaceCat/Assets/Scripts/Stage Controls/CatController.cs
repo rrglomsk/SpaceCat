@@ -13,5 +13,6 @@ public class CatController : MonoBehaviour {
 	void Update () {
 		//transform.position += moveSpeed;
 	}
-	
+
+
 }

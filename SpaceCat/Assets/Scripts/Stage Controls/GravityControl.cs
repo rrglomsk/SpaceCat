@@ -52,7 +52,7 @@ public class GravityControl : MonoBehaviour {
 		
 		if (hit.gameObject.name == "GravityDown" && hit && phase == "began")
 		{
-			spaceCat.rigidbody2D.gravityScale = 0.15f;
+			spaceCat.rigidbody2D.gravityScale = 0.35f;
 			animator.SetBool("Floating", false);
 		}
 	}
