@@ -7,6 +7,8 @@ public class GravityControl : MonoBehaviour {
 	public Vector3 jumpMovement = new Vector3();
 	private Animator animator;
 	private Camera controlsCamera;
+	private Animator upArrowAnimator;
+	private Animator downArrowAnimator;
 
 	
 	
@@ -14,6 +16,8 @@ public class GravityControl : MonoBehaviour {
 	void Start () {
 		spaceCat = GameObject.Find("cat");
 		animator = GameObject.Find ("cat").GetComponent<Animator>();
+		downArrowAnimator = GameObject.Find ("GravityDown").GetComponent<Animator>();
+		upArrowAnimator = GameObject.Find ("GravityUp").GetComponent<Animator>();
 		controlsCamera = GameObject.Find("Controls Camera").camera;
 
 	}
