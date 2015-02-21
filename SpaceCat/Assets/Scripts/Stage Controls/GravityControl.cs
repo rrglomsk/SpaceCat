@@ -50,7 +50,7 @@ public class GravityControl : MonoBehaviour {
 		{
 			spaceCat.rigidbody2D.gravityScale = -0.09f;
 			animator.SetBool("Floating", true);
-
+			upArrowAnimator.SetTrigger ("Pressed");
 			
 		}
 		
@@ -58,6 +58,7 @@ public class GravityControl : MonoBehaviour {
 		{
 			spaceCat.rigidbody2D.gravityScale = 0.35f;
 			animator.SetBool("Floating", false);
+			downArrowAnimator.SetTrigger ("Pressed");
 		}
 	}
 

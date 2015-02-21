@@ -1,15 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Stage Controls\GravityControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Stage Controls\BackgroundParallax.cs">
     <Files>
-      <File FileName="Assets\Scripts\Stage Controls\ObstacleHit.cs" Line="18" Column="3" />
-      <File FileName="Assets\Scripts\Stage Controls\PauseButton.cs" Line="8" Column="1" />
-      <File FileName="Assets\Scripts\Select Stage\PlanetSelect.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Stage Controls\HorizontalPlatformMove.cs" Line="6" Column="45" />
-      <File FileName="Assets\Scripts\Stage Controls\VerticalWallMovement.cs" Line="19" Column="4" />
-      <File FileName="Assets\Scripts\Stage Controls\UpwardsPlatform.cs" Line="27" Column="1" />
-      <File FileName="Assets\Scripts\Stage Controls\CatController.cs" Line="19" Column="3" />
-      <File FileName="Assets\Scripts\Stage Controls\GravityControl.cs" Line="22" Column="3" />
+      <File FileName="Assets\Scripts\Stage Controls\HorizontalPlatformMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Stage Controls\GravityControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Stage Controls\ObstacleHit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Stage Controls\PauseButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Stage Controls\CatController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Stage Controls\CameraFollow.cs" Line="19" Column="1" />
+      <File FileName="Assets\Scripts\Stage Controls\BackgroundParallax.cs" Line="33" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

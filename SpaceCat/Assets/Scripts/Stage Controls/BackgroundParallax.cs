@@ -41,9 +41,9 @@ public class BackgroundParallax : MonoBehaviour {
 
 			Vector3 backgroundTargetPos = new Vector3 (backgroundTargetPosX, backgrounds[i].position.y, backgrounds[i].position.z);
 			
-			backgrounds[i].position = Vector3.Lerp (backgrounds[i].position, backgroundTargetPos, smoothing * Time.deltaTime);
+			backgrounds[i].position = Vector3.Lerp (backgrounds[i].position, backgroundTargetPos, smoothing * Time.smoothDeltaTime);
 		}
 		
-		previousCameraPos = camera.position; 
+		previousCameraPos = camera.position;
 	}
 }
