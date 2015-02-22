@@ -14,8 +14,8 @@ public class GravityControl : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		spaceCat = GameObject.Find("cat");
-		animator = GameObject.Find ("cat").GetComponent<Animator>();
+		spaceCat = GameObject.Find("Cat");
+		animator = GameObject.Find ("Cat").GetComponent<Animator>();
 		downArrowAnimator = GameObject.Find ("GravityDown").GetComponent<Animator>();
 		upArrowAnimator = GameObject.Find ("GravityUp").GetComponent<Animator>();
 		controlsCamera = GameObject.Find("Controls Camera").camera;

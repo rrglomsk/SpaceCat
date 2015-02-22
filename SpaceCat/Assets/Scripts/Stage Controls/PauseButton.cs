@@ -19,10 +19,10 @@ public class PauseButton : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		spaceCat = GameObject.Find("cat");
+		spaceCat = GameObject.Find("Cat");
 		//backdrop = GameObject.Find("Backdrop");
 		//mountain = GameObject.Find ("Mountains");
-		animator = GameObject.Find ("cat").GetComponent<Animator>();
+		animator = GameObject.Find ("Cat").GetComponent<Animator>();
 		startAnimator = GetComponent<Animator>();
 		controlsCamera = GameObject.Find("Controls Camera").camera;
 
@@ -62,7 +62,7 @@ public class PauseButton : MonoBehaviour {
 		Vector2 touchPos = new Vector2(wp.x, wp.y);
 		Collider2D hit = Physics2D.OverlapPoint(touchPos);
 		
-		if (hit.gameObject.name == "Movement" && hit && phase == "began")
+		if (hit.gameObject.name == "Move Button" && hit && phase == "began")
 		{
 			moving = true;
 			startAnimator.SetBool ("Pressed", true);

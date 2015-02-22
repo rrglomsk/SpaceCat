@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class BackgroundParallax : MonoBehaviour {
 
 	//RETURN TO THIS FILE?
-	public Transform [] backgrounds;    
+	public List<Transform> backgrounds;    
 	private float [] parallaxScales;   
 	public float smoothing;     
 	
@@ -22,9 +23,9 @@ public class BackgroundParallax : MonoBehaviour {
 		
 	{
 		previousCameraPos = camera.position;
-		parallaxScales = new float[backgrounds.Length]; 
+		parallaxScales = new float[backgrounds.Count]; 
 		
-		for (int i = 0; i < backgrounds.Length; i++)  
+		for (int i = 0; i < backgrounds.Count; i++)  
 		{
 			parallaxScales[i] = backgrounds[i].position.z * -1;		
 		}
@@ -32,7 +33,7 @@ public class BackgroundParallax : MonoBehaviour {
 	
 	void Update () 
 	{
-		for (int i = 0; i < backgrounds.Length; i++) {
+		for (int i = 0; i < backgrounds.Count; i++) {
 			float parallax = (previousCameraPos.x - camera.position.x) * parallaxScales[i];
 
 			float previousBackgroundPos = backgrounds[i].position.x;
@@ -45,5 +46,20 @@ public class BackgroundParallax : MonoBehaviour {
 		}
 		
 		previousCameraPos = camera.position;
+	}
+
+	public void addBackgrounds(Transform newBackground) {
+		backgrounds.Add (newBackground);
+		parallaxScales = new float[backgrounds.Count]; 
+		for (int i = 0; i < backgrounds.Count; i++) {
+			parallaxScales[i] = backgrounds[i].position.z * -1;		
+		}
+	}
+
+	public void removeBackgrounds(Transform removedBackground) {
+		backgrounds.Remove (removedBackground);
+		for (int i = 0; i < backgrounds.Count; i++) {
+			parallaxScales[i] = backgrounds[i].position.z * -1;		
+		}
 	}
 }

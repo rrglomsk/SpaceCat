@@ -38,6 +38,12 @@ public class PlanetSelect : MonoBehaviour {
 
 		if (hit.gameObject.name == "Planet 1" && hit && phase == "ended") {
 			Application.LoadLevel ("Planet 1");
+		} else if (hit.gameObject.name == "Planet 2" && hit && phase == "ended") {
+			Application.LoadLevel ("Planet 2");
+		} else if (hit.gameObject.name == "Planet 3" && hit && phase == "ended") {
+			Application.LoadLevel ("Planet 3");
+		} else if (hit.gameObject.name == "Spaceship" && hit && phase == "ended") {
+			Application.LoadLevel ("Tutorial");
 		}
 	}
 }

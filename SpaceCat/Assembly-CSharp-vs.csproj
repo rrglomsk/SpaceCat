@@ -46,7 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BackgroundScroll.cs" />
+     <Compile Include="Assets\Scripts\SecondaryRepeat.cs" />
      <Compile Include="Assets\Scripts\Select Stage\PlanetSelect.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\BackgroundParallax.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\CameraFollow.cs" />

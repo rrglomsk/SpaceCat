@@ -8,7 +8,7 @@ public class GoldFish : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		spaceCat = GameObject.Find("cat");
+		spaceCat = GameObject.Find("Cat");
 		animator = GetComponent<Animator>();
 	}
 	
