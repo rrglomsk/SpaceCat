@@ -15,9 +15,7 @@ public class PauseButton : MonoBehaviour {
 	public Vector3 mountainSpeed = new Vector3();
 
 	public Vector3 moveSpeed = new Vector3();
-
-
-	// Use this for initialization
+	
 	void Start () {
 		spaceCat = GameObject.Find("Cat");
 		//backdrop = GameObject.Find("Backdrop");
@@ -27,8 +25,7 @@ public class PauseButton : MonoBehaviour {
 		controlsCamera = GameObject.Find("Controls Camera").camera;
 
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (Application.platform == RuntimePlatform.Android) {
 						if (Input.touchCount > 0) {

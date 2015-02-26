@@ -7,14 +7,12 @@ public class PlanetSelect : MonoBehaviour {
 	private string selectedPlanet;
 	private Animator animator;
 
-
 	
-	// Use this for initialization
 	void Start () {
 		selectedPlanet = this.name;
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 		if (Application.platform == RuntimePlatform.Android) {
 			if (Input.touchCount > 0) {
@@ -36,13 +34,13 @@ public class PlanetSelect : MonoBehaviour {
 
 		}
 
-		if (hit.gameObject.name == "Planet 1" && hit && phase == "ended") {
+		if (hit.gameObject.name == "Planet 1" && hit && phase == "began") {
 			Application.LoadLevel ("Planet 1");
-		} else if (hit.gameObject.name == "Planet 2" && hit && phase == "ended") {
+		} else if (hit.gameObject.name == "Planet 2" && hit && phase == "began") {
 			Application.LoadLevel ("Planet 2");
-		} else if (hit.gameObject.name == "Planet 3" && hit && phase == "ended") {
+		} else if (hit.gameObject.name == "Planet 3" && hit && phase == "began") {
 			Application.LoadLevel ("Planet 3");
-		} else if (hit.gameObject.name == "Spaceship" && hit && phase == "ended") {
+		} else if (hit.gameObject.name == "Spaceship" && hit && phase == "began") {
 			Application.LoadLevel ("Tutorial");
 		}
 	}

@@ -8,12 +8,10 @@ public class HorizontalPlatformMove : MonoBehaviour {
 	public float distanceToTravel;
 	private bool movingRight = true;
 
-	// Use this for initialization
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 	
 		if (distanceTraveled < distanceToTravel && movingRight) {

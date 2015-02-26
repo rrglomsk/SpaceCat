@@ -5,6 +5,7 @@ public class CatController : MonoBehaviour {
 
 	public Transform groundCheckTransform;
 	private bool grounded;
+	private int fishCount = 0;
 	public LayerMask groundCheckLayer;
 	private Animator animator;
 
@@ -21,7 +22,15 @@ public class CatController : MonoBehaviour {
 	void UpdateGrounded() {
 		grounded = Physics2D.OverlapCircle (groundCheckTransform.position, 0.1f, groundCheckLayer);
 		animator.SetBool ("Grounded", grounded);
-		print (grounded);
+	}
+
+	public void addFish(){
+		fishCount += 1; 
+		print ("BEEP");
+	}
+
+	public int getFish() {
+		return fishCount;
 	}
 
 }

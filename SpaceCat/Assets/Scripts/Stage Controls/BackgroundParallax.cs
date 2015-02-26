@@ -9,14 +9,17 @@ public class BackgroundParallax : MonoBehaviour {
 	private float [] parallaxScales;   
 	public float smoothing;     
 	
-	private Transform camera;             
+	private Camera backgroundCamera;
+	private Transform camera;
 	private Vector3 previousCameraPos;    
 	
 	
 	void Awake () 
 		
 	{
-		camera = Camera.main.transform; 
+		backgroundCamera = GameObject.Find("Background Camera").camera;
+		camera = backgroundCamera.transform;
+
 	}
 	
 	void Start ()
@@ -31,7 +34,7 @@ public class BackgroundParallax : MonoBehaviour {
 		}
 	}
 	
-	void Update () 
+	void FixedUpdate () 
 	{
 		for (int i = 0; i < backgrounds.Count; i++) {
 			float parallax = (previousCameraPos.x - camera.position.x) * parallaxScales[i];

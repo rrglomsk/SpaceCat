@@ -46,8 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EndStage.cs" />
+     <Compile Include="Assets\ResetGame.cs" />
+     <Compile Include="Assets\Resources\SmoothnessTest.cs" />
+     <Compile Include="Assets\Scripts\BackToStageSelect.cs" />
+     <Compile Include="Assets\Scripts\CatFollow.cs" />
      <Compile Include="Assets\Scripts\SecondaryRepeat.cs" />
      <Compile Include="Assets\Scripts\Select Stage\PlanetSelect.cs" />
+     <Compile Include="Assets\Scripts\SmoothBackgroundFollow.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\BackgroundParallax.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\CatController.cs" />

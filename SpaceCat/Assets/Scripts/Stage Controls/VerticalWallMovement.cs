@@ -7,13 +7,11 @@ public class VerticalWallMovement : MonoBehaviour {
 	private float distanceTraveled = 0;
 	public float distanceToTravel;
 	public bool movingDown;
-
-	// Use this for initialization
+	
 	void Start () {
 	
 	}
 
-	// Update is called once per frame
 	void Update () {
 		if (distanceTraveled < distanceToTravel && movingDown) {
 			transform.position += movingSpeed;

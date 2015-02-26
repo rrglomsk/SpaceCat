@@ -5,14 +5,14 @@ public class GoldFish : MonoBehaviour {
 
 	private GameObject spaceCat;
 	private Animator animator;
-
-	// Use this for initialization
+	CatController catController;
+	
 	void Start () {
 		spaceCat = GameObject.Find("Cat");
 		animator = GetComponent<Animator>();
+		catController = (CatController) spaceCat.GetComponent (typeof(CatController));
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 
 	}
@@ -20,7 +20,8 @@ public class GoldFish : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.gameObject == spaceCat) {
 			animator.SetBool("Collected", true);
-			DestroyObject (this);
+			DestroyObject (gameObject, 2.0f);
+			catController.addFish();
 		}
 	}
 }
