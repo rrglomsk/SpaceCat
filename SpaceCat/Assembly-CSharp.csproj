@@ -46,11 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CheckFloating.cs" />
+     <Compile Include="Assets\DisplayHint.cs" />
+     <Compile Include="Assets\DisplayText.cs" />
      <Compile Include="Assets\EndStage.cs" />
+     <Compile Include="Assets\RemoveBarrier.cs" />
      <Compile Include="Assets\ResetGame.cs" />
      <Compile Include="Assets\Resources\SmoothnessTest.cs" />
      <Compile Include="Assets\Scripts\BackToStageSelect.cs" />
      <Compile Include="Assets\Scripts\CatFollow.cs" />
+     <Compile Include="Assets\Scripts\EndTutorial.cs" />
      <Compile Include="Assets\Scripts\SecondaryRepeat.cs" />
      <Compile Include="Assets\Scripts\Select Stage\PlanetSelect.cs" />
      <Compile Include="Assets\Scripts\SmoothBackgroundFollow.cs" />
@@ -67,6 +72,7 @@
      <Compile Include="Assets\Scripts\Stage Controls\UpwardsPlatform.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\VerticalWallMovement.cs" />
      <Compile Include="Assets\Scripts\Start Screen\StartGame.cs" />
+     <Compile Include="Assets\UpdateFishCount.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>

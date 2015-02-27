@@ -1,16 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\EndStage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\DisplayHint.cs">
     <Files>
-      <File FileName="Assets\Scripts\Select Stage\PlanetSelect.cs" Line="46" Column="3" />
-      <File FileName="Assets\Scripts\BackToStageSelect.cs" Line="29" Column="70" />
-      <File FileName="Assets\Scripts\Stage Controls\CameraFollow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\SmoothnessTest.cs" Line="1" Column="1" />
+      <File FileName="Assets\UpdateFishCount.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Select Stage\PlanetSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BackToStageSelect.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Stage Controls\PauseButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SmoothBackgroundFollow.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Stage Controls\CatController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Stage Controls\GoldFish.cs" Line="19" Column="2" />
-      <File FileName="Assets\EndStage.cs" Line="30" Column="22" />
-      <File FileName="Assets\ResetGame.cs" Line="21" Column="2" />
+      <File FileName="Assets\Scripts\Stage Controls\GoldFish.cs" Line="1" Column="1" />
+      <File FileName="Assets\EndStage.cs" Line="1" Column="1" />
+      <File FileName="Assets\DisplayText.cs" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\EndTutorial.cs" Line="1" Column="1" />
+      <File FileName="Assets\CheckFloating.cs" Line="1" Column="1" />
+      <File FileName="Assets\RemoveBarrier.cs" Line="13" Column="2" />
+      <File FileName="Assets\DisplayHint.cs" Line="10" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

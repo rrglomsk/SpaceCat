@@ -26,7 +26,6 @@ public class CatController : MonoBehaviour {
 
 	public void addFish(){
 		fishCount += 1; 
-		print ("BEEP");
 	}
 
 	public int getFish() {

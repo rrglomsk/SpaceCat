@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlanetSelect : MonoBehaviour {
@@ -6,12 +7,19 @@ public class PlanetSelect : MonoBehaviour {
 	private bool selected = false;
 	private string selectedPlanet;
 	private Animator animator;
+	private int fishCount;
+	private GameObject lockedText;
+	string planet1Text;
+	string planet2Text;
+	string planet3Text;
 
-	
 	void Start () {
 		selectedPlanet = this.name;
+		planet1Text = "You need to complete the tutorial before you can visit this planet";
+		planet2Text = "You need at least 3 Gold Fish and the Fire Token to visit this planet";
+		planet3Text = "You need at least 8 Gold Fish and the Ice Token to visit this planet";
+
 	}
-	
 
 	void Update () {
 		if (Application.platform == RuntimePlatform.Android) {
@@ -24,6 +32,47 @@ public class PlanetSelect : MonoBehaviour {
 			}
 		}
 	}
+
+	void planet1Start(Vector3 pos) {
+		int tutorialComplete = PlayerPrefs.GetInt ("tutorialComplete", 0);
+		if (tutorialComplete == 1) {
+			Application.LoadLevel ("Planet 1");
+		} else {
+			lockedText.transform.position = pos;
+			Text planetText = lockedText.gameObject.GetComponent<Text> ();
+			planetText.text = planet1Text;
+		}
+	}
+
+	void planet2Start(Vector3 pos) {
+		int fishCount = PlayerPrefs.GetInt("fishCount");
+		if (fishCount >= 3) {
+			Application.LoadLevel ("Planet 2");
+		} else {
+			lockedText.transform.position = pos;
+			Text planetText = lockedText.gameObject.GetComponent<Text> ();
+			planetText.text = planet2Text;
+		}
+	}
+
+	void planet3Start(Vector3 pos) {
+		int fishCount = PlayerPrefs.GetInt("fishCount");
+		if (fishCount >= 8) {
+			Application.LoadLevel ("Planet 3");
+		} else {
+			lockedText.transform.position = pos;
+			Text planetText = lockedText.gameObject.GetComponent<Text> ();
+			planetText.text = planet3Text;
+		}
+	}
+
+	void planetTutorialStart() {
+		Application.LoadLevel ("Tutorial");
+	}
+
+	public void setLocked(GameObject text) {
+		lockedText = text;
+	}
 	
 	void CheckTouch(Vector3 pos, string phase) {
 		Vector3 wp = Camera.main.ScreenToWorldPoint(pos);
@@ -31,17 +80,13 @@ public class PlanetSelect : MonoBehaviour {
 		Collider2D hit = Physics2D.OverlapPoint(touchPos);
 
 		if (hit.gameObject.name == "Planet 1" && hit && phase == "began") {
-
-		}
-
-		if (hit.gameObject.name == "Planet 1" && hit && phase == "began") {
-			Application.LoadLevel ("Planet 1");
+			planet1Start (pos);
 		} else if (hit.gameObject.name == "Planet 2" && hit && phase == "began") {
-			Application.LoadLevel ("Planet 2");
+			planet2Start (pos);
 		} else if (hit.gameObject.name == "Planet 3" && hit && phase == "began") {
-			Application.LoadLevel ("Planet 3");
+			planet3Start (pos);
 		} else if (hit.gameObject.name == "Spaceship" && hit && phase == "began") {
-			Application.LoadLevel ("Tutorial");
+			planetTutorialStart();
 		}
 	}
 }
