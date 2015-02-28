@@ -50,6 +50,7 @@
      <Compile Include="Assets\DisplayHint.cs" />
      <Compile Include="Assets\DisplayText.cs" />
      <Compile Include="Assets\EndStage.cs" />
+     <Compile Include="Assets\FakeObstacle.cs" />
      <Compile Include="Assets\RemoveBarrier.cs" />
      <Compile Include="Assets\ResetGame.cs" />
      <Compile Include="Assets\Resources\SmoothnessTest.cs" />
@@ -72,6 +73,11 @@
      <Compile Include="Assets\Scripts\Stage Controls\UpwardsPlatform.cs" />
      <Compile Include="Assets\Scripts\Stage Controls\VerticalWallMovement.cs" />
      <Compile Include="Assets\Scripts\Start Screen\StartGame.cs" />
+     <Compile Include="Assets\TriggerFinalHint.cs" />
+     <Compile Include="Assets\TriggerFishHint.cs" />
+     <Compile Include="Assets\TriggerFloatHint.cs" />
+     <Compile Include="Assets\TriggerObstacleFishEnd.cs" />
+     <Compile Include="Assets\TriggerObstacleHintEnd.cs" />
      <Compile Include="Assets\UpdateFishCount.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
  <Reference Include="Assembly-UnityScript-firstpass">

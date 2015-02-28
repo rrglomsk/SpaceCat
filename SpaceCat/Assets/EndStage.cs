@@ -26,8 +26,14 @@ public class EndStage : MonoBehaviour {
 			int fishCount = PlayerPrefs.GetInt("fishCount");
 			fishCount += catController.getFish ();
 			PlayerPrefs.SetInt("fishCount", fishCount);
+
+			if (Application.loadedLevelName == "Planet 1") {
+				PlayerPrefs.SetInt ("completedPlanet1", 1);
+			} else if (Application.loadedLevelName == "Planet 2") {
+				print ("wow!");
+				PlayerPrefs.SetInt ("completedPlanet2", 1);
+			}
 			PlayerPrefs.Save();
-			print (fishCount);
 		}
 	}
 }

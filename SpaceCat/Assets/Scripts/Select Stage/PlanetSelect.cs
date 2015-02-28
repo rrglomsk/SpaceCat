@@ -13,11 +13,18 @@ public class PlanetSelect : MonoBehaviour {
 	string planet2Text;
 	string planet3Text;
 
+	GameObject fireCoin;
+	GameObject iceCoin;
+
 	void Start () {
 		selectedPlanet = this.name;
+		fireCoin = GameObject.Find ("Fire Coin");
+		iceCoin = GameObject.Find ("Ice Coin");
 		planet1Text = "You need to complete the tutorial before you can visit this planet";
 		planet2Text = "You need at least 3 Gold Fish and the Fire Token to visit this planet";
 		planet3Text = "You need at least 8 Gold Fish and the Ice Token to visit this planet";
+		fireCoin.SetActive(false);
+		iceCoin.SetActive (false);
 
 	}
 
@@ -31,6 +38,7 @@ public class PlanetSelect : MonoBehaviour {
 				}
 			}
 		}
+		checkCoins ();
 	}
 
 	void planet1Start(Vector3 pos) {
@@ -72,6 +80,19 @@ public class PlanetSelect : MonoBehaviour {
 
 	public void setLocked(GameObject text) {
 		lockedText = text;
+	}
+
+	void checkCoins() {
+		int planet1Complete = PlayerPrefs.GetInt ("completedPlanet1", 0);
+		int planet2Complete = PlayerPrefs.GetInt ("completedPlanet2", 0);
+
+		if (planet1Complete == 1) {
+			fireCoin.SetActive(true);
+		} 
+
+		if (planet2Complete == 1) {
+			iceCoin.SetActive(true);
+		}
 	}
 	
 	void CheckTouch(Vector3 pos, string phase) {
