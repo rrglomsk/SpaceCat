@@ -55,7 +55,7 @@ public class SecondaryRepeat : MonoBehaviour {
 			if (secondaryStartX > addSecondaryX)
 				addSecondary = false;
 
-			if (secondaryEndX < removeSecondaryX)
+			if ((secondaryEndX + 7.0f) < removeSecondaryX)
 				secondaryToRemove.Add(secondary);
 
 			farSecondaryEndX = Mathf.Max(farSecondaryEndX, secondaryEndX);

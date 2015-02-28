@@ -47,7 +47,7 @@ public class PlanetSelect : MonoBehaviour {
 
 	void planet2Start(Vector3 pos) {
 		int fishCount = PlayerPrefs.GetInt("fishCount");
-		if (fishCount >= 3) {
+		if (fishCount >= 1) {
 			Application.LoadLevel ("Planet 2");
 		} else {
 			lockedText.transform.position = new Vector3(580.0f, 130.0f, 0);
