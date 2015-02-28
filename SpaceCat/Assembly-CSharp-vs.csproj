@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\CheckFloating.cs" />
      <Compile Include="Assets\DisplayHint.cs" />
+     <Compile Include="Assets\DisplayStageSelectObjects.cs" />
      <Compile Include="Assets\DisplayText.cs" />
      <Compile Include="Assets\EndStage.cs" />
      <Compile Include="Assets\FakeObstacle.cs" />
