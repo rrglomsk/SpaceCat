@@ -47,7 +47,8 @@ public class PlanetSelect : MonoBehaviour {
 
 	void planet2Start(Vector3 pos) {
 		int fishCount = PlayerPrefs.GetInt("fishCount");
-		if (fishCount >= 1) {
+		int completedPlanet1 = PlayerPrefs.GetInt ("completedPlanet1", 0);
+		if (fishCount >= 3 && completedPlanet1 == 1) {
 			Application.LoadLevel ("Planet 2");
 		} else {
 			lockedText.transform.position = new Vector3(580.0f, 130.0f, 0);
@@ -58,7 +59,8 @@ public class PlanetSelect : MonoBehaviour {
 
 	void planet3Start(Vector3 pos) {
 		int fishCount = PlayerPrefs.GetInt("fishCount");
-		if (fishCount >= 1) {
+		int completedPlanet2 = PlayerPrefs.GetInt ("completedPlanet2", 0);
+		if (fishCount >= 8 && completedPlanet2 == 1) {
 			Application.LoadLevel ("Planet 3");
 		} else {
 			lockedText.transform.position = new Vector3(690.0f, 170.0f, 0);
