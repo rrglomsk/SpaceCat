@@ -69,6 +69,9 @@ public class DisplayHint : MonoBehaviour {
 
 		if (fakeObstacle.getHit() && hintObstacle) {
 			hintObstacle.transform.position = getHintPosition ();
+			if (hintJump) {
+				DestroyObject (hintJump);
+			}
 		}
 
 		if (triggerObstacleHintEnd.getObstacleEndHint() && hintObstacle) {
