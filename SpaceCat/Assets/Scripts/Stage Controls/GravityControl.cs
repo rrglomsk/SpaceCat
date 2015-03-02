@@ -9,10 +9,7 @@ public class GravityControl : MonoBehaviour {
 	private Camera controlsCamera;
 	private Animator upArrowAnimator;
 	private Animator downArrowAnimator;
-
 	
-	
-	// Use this for initialization
 	void Start () {
 		spaceCat = GameObject.Find("Cat");
 		animator = GameObject.Find ("Cat").GetComponent<Animator>();
@@ -21,8 +18,7 @@ public class GravityControl : MonoBehaviour {
 		controlsCamera = GameObject.Find("Controls Camera").camera;
 
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (Application.platform == RuntimePlatform.Android) {
 			if (Input.touchCount == 1) {

@@ -7,12 +7,12 @@ public class Jump : MonoBehaviour {
 	public Vector3 jumpMovement = new Vector3();
 
 
-	// Use this for initialization
+
 	void Start () {
 		spaceCat = GameObject.Find("cat");
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 				if (Application.platform == RuntimePlatform.Android) {
 						if (Input.touchCount > 0) {
@@ -38,8 +38,6 @@ public class Jump : MonoBehaviour {
 		if (hit.gameObject.name == "Gravity" && hit && phase == "began")
 		{
 			spaceCat.rigidbody2D.gravityScale = -0.1f;
-			//spaceCat.transform.position += jumpMovement;
-			//Physics.gravity = new Vector3(0, -1.0F, 0);
 		}
 	}
 }

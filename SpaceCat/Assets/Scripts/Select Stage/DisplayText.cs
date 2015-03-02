@@ -12,7 +12,7 @@ public class DisplayText : MonoBehaviour {
 	PlanetSelect planetSelect2;
 	PlanetSelect planetSelect3;
 
-	// Use this for initialization
+
 	void Start () {
 		GameObject messages = (GameObject)Instantiate(lockedMessage);
 		messages.transform.SetParent (parent:transform);
@@ -30,7 +30,7 @@ public class DisplayText : MonoBehaviour {
 		planetSelect3.setLocked (messages);
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 	 
 	}

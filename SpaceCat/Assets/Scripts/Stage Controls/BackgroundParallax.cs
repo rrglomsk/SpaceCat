@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BackgroundParallax : MonoBehaviour {
-
-	//RETURN TO THIS FILE?
+	
 	public List<Transform> backgrounds;    
 	private float [] parallaxScales;   
 	public float smoothing;     

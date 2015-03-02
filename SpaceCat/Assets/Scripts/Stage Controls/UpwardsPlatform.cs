@@ -8,12 +8,12 @@ public class UpwardsPlatform : MonoBehaviour {
 	public float travelHeight;
 	private Vector3 originalHeight;
 
-	// Use this for initialization
+
 	void Start () {
 		originalHeight = transform.position;
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 
 		if (transform.position.y < travelHeight) {
