@@ -25,8 +25,9 @@ public class ResetGame : MonoBehaviour {
 		Collider2D hit = Physics2D.OverlapPoint(touchPos);
 		
 		if (hit.gameObject.name == "Reset Click" && hit && phase == "began") {
-			PlayerPrefs.DeleteAll ();
-			Application.LoadLevel ("Start Screen");
+			//PlayerPrefs.DeleteAll ();
+			//Application.LoadLevel ("Start Screen");
+			Application.LoadLevel("Reset Confirmation");
 		} 
 	}
 }

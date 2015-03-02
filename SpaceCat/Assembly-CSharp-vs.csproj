@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ConfirmReset.cs" />
      <Compile Include="Assets\Resources\SmoothnessTest.cs" />
      <Compile Include="Assets\Scripts\CheckFloating.cs" />
      <Compile Include="Assets\Scripts\DisplayHint.cs" />

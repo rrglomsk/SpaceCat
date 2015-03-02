@@ -20,6 +20,7 @@ public class GoldFish : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.gameObject == spaceCat) {
 			animator.SetBool("Collected", true);
+			audio.Play();
 			DestroyObject (gameObject, 2.0f);
 			catController.addFish();
 		}
