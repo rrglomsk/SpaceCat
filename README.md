@@ -5,6 +5,8 @@ It was created for my thesis project for Oakland University's Honors College.
 
 All artwork is credited to myself.
 
+A video of gameplay can be found here: https://vid.me/V0K5
+
 
 **License:**
 * All art content is licensed under [CC BY-NC-ND] (http://creativecommons.org/licenses/by-nc-nd/4.0/).
