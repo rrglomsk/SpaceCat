@@ -5,7 +5,9 @@ It was created for my thesis project for Oakland University's Honors College.
 
 All artwork is credited to myself.
 
-A video of gameplay can be found here: https://vid.me/V0K5
+
+A short demo video of gameplay (with music) can be found here: https://vid.me/i9Qu
+A full video of gameplay (no music) can be found here: https://vid.me/V0K5
 
 
 **License:**
