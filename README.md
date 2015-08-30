@@ -7,6 +7,7 @@ All artwork is credited to myself.
 
 
 A short demo video of gameplay (with music) can be found here: https://vid.me/i9Qu
+
 A full video of gameplay (no music) can be found here: https://vid.me/V0K5
 
 
